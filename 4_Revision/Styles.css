@@ -12,7 +12,7 @@
     background-size: cover;
     background-attachment: fixed;
     padding: 50px;    
-    color: white
+    color: white;
 }
 
 main {
@@ -29,7 +29,53 @@ main h2 {
 main figure img {
     width: 500px;
     height: auto;
+    border-radius: 4px;
 }
 
-main figure figcaption{
+main figure {
+    text-align: center;
+    display: inline-block;
+    color: gray;
+    font-size: 15px;
+}
+
+main figure figcaption {
+    padding-top: 10px;
+}
+
+#P1 p::first-letter{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+p {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+#P3 p::first-letter{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+main h3 {
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+main ul li::marker {
+    color: orangered;
+}
+
+main ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: 2c3e50;
+    color: white;
+    padding: 20px;
 }
