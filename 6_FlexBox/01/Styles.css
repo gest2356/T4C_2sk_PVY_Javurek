@@ -9,19 +9,30 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: space-around;
 }
+
+#up div:nth-child(1) img{
+    width: 200px;
+}
+
 
 #up div:nth-child(2){
     flex-direction: column;
     display: flex;
+    color:white;
+    align-items: center;
+    font-size: 50px;
 }
 
 #up div:nth-child(2) span:nth-child(2){
-    margin-left: 40px;
+    margin-left: 0px;
 }
 
 #up div:nth-child(3) {
     display: flex;
+    width: auto;
+    height: 300px;
 }
 
 #up div:nth-child(4){
@@ -30,13 +41,17 @@
     display: flex;
 }
 
+#up div:nth-child(4) input{
+}
+
+#up div:nth-child(4) div{
+    height: 30px;
+    width: 400px;
+}
+
 #up div:nth-child(5){
     color: yellow;
     flex-direction: column;
     display: flex;
 }
 
-#up div:nth-child(2) span:nth-child(2){
-    text-align: center;
-    align-items: center;
-}
