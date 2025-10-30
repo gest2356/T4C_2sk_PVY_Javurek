@@ -1,0 +1,29 @@
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+    font-size: 2rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px 5px;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: violet;
+}
+
+.wrapper {
+    max-width: 500vw;
+    border: solid 1px red;;
+    overflow: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+
+    tbody > tr:nth-child(even) { background-color: initial; }
+
+     tbody > tr:nth-child(odd) { background-color: blue; }
+
+    table, th, td { font-size: initial; }
+}
