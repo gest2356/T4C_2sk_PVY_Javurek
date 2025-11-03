@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <div>
+            <label for="Name_input">Jméno</label>
+            <input type="text" name="" id="Name_input">
+        </div>
+
+        <div>
+            <label for="Address_input">Adressa</label>
+            <input type="text" name="" id="Address_input" required>
+        </div>
+
+        <div>
+            <label for="Email_input">Email</label>
+            <input type="email" name="email" id="Email_input">
+        </div>
+
+        <div>
+            <label for="amount_input">Počet kusů</label>
+            <input type="number" name="number" id="amount_input" min="1">
+        </div>
+
+        <div>
+            <div>
+                <label for="size_s">Malá</label>
+                <input type="radio" name="size" id="size_s" value="s">
+            </div>
+            <div>
+                <label for="size_m">Střední</label>
+                <input type="radio" name="size" id="size_m" value="m">
+            </div>
+            <div>
+                <label for="size_l">Velká</label>
+                <input type="radio" name="size" id="size_l" value="l">
+            </div>
+
+            <button type="submit">odeslat</button>
+        </div>
+
+
+    </form>
+</body>
+</html>
