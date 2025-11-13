@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dorm</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+   <main>
+        <form  class="gap-large flex flex-column">
+        <div class="flex flex-row gap-small">
+            <div class="input-box">
+                <label for="firstNameBox">FirstName:</label>
+                <input type="text" name="firstNameBox" id="firstNameBox" placeholder="FirstName" required>
+            </div>
+            <div class="input-box">
+                <label for="lastNameBox">FirstName:</label>
+                <input type="text" name="lastNameBox" id="lastNameBox" placeholder="LastName" required>
+            </div>
+        </div>
+
+        <div class="flex flex-row gap-small">
+            <div class="input-box">
+                <label for="PhoneBox">Phone:</label>
+                <input type="text" name="PhoneBox" id="PhoneBox" placeholder="Phone" required>
+            </div>
+            <div class="input-box">
+                <label for="emailBox">Email:</label>
+                <input type="ema" name="emailBox" id="emailBox" placeholder="emailBox" required pattern="/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;">
+            </div>
+        </div>
+
+       <fieldset>
+        <legend>Fakturační udaje</legend>
+        <div class="flex flex-row gap-small">
+            <div class="input-box">
+                <label for="AddresBox">Adresa:</label>
+                <input type="text" name="AddresBox" id="AddresBox" placeholder="Addres" required>
+            </div>
+            <div class="input-box">
+                <label for="cityBox">City:</label>
+                <input type="text" name="cityBox" id="cityBox" list="citySelectionBox" placeholder="cityBox" required>
+                <datalist id="citySelectionBox">
+                    <option value="Praha"></option>
+                    <option value="Brno"></option>
+                    <option value="Ostrava"></option>
+                </datalist>
+            </div>
+            <div class="input-box">
+                <label for="poustCodeBox">PostCode:</label>
+                <input type="text" name="poustCodeBox" id="poustCodeBox" placeholder="poustCodeBox" required>
+            </div>
+        </div>
+
+       <fieldset>
+        <legend>Delivery</legend>
+        <div class="flex flex-column gap-small">
+            <div>
+                <label for="pickUpRadio">Pick up</label>
+                <input type="radio" name="Delivery" id="pickUpRadio">
+            </div>
+            <div>
+                <label for="PPLRadio">PPL</label>
+                <input type="radio" name="Delivery" id="PPLRadio">
+            </div>
+        </div>
+
+        </fieldset> 
+        <div>
+            <button type="submit">submit</button>
+        </div>
+
+        <div class="form-validation">
+            <h3>Eroorrs!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h3>
+            <ul>
+                <li class="fname-invalid">First name invalid</li>
+                <li class="lname-invalid">Last name invalid </li>
+                <li class="Phone-invalid">phone is invalid</li>
+            </ul>
+        </div>
+        </form>
+   </main> 
+</body>
+</html>

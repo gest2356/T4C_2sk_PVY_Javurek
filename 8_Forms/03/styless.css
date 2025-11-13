@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gap-small: 0.5rem;
+    --gap-medium: 1rem;
+    --gap-large: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-small {
+    gap: var(--gap-small);
+}
+
+.gap-medum {
+    gap: var(--gap-medium);
+}
+
+.gap-large {
+    gap: var(--gap-large);
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium)
+}
+
+.input-box > input {
+    padding: var(--gap-small);
+}
+
+.input-box > input::placeholder {
+    font-style: italic;
+}
+
+
+.input-box > label:has(+ input:required)::after {
+    content: "*";
+    color:red;
+    margin-left: 0.2rem;
+}
+
+.form-validation {
+    border: solid 1px red;
+    background-color: coral;
+    padding: var(--gap-small);
+    display: none;
+}
+
+.form-validation > ul {
+    list-style-position: inside;
+}
+
+form:has(input:user-invalid) .form-validation {
+    display: block;
+}
+
+.form-validation >ul >li {
+    display: none;
+}
+
+form:has(input[name="firstNameBox"]:user-invalid) .fname-invalid {
+    display: list-item;
+}
+
+form:has(input[name="lastNameBox"]:user-invalid) .lname-invalid {
+    display: list-item;
+}
+
+form:has(input[name="PhoneBox"]:user-invalid) .Phone-invalid {
+    display: list-item;
+}
+input:focus {
+    outline: solid 2px crimson; 
+    outline-offset: 2px;
+}
+
+button:active{
+    background-color: brown;
+    transition:  background-color 0.2s ease-out;
+}
