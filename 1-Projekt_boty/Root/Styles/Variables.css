@@ -1,1 +1,20 @@
-@
+:root {
+    --font-main: 'Arial', sans-serif;
+    --font-size: 16px;
+
+    --color-bg: white;
+    --color-text: white;
+    --color-text-sec: #757d96;
+    --color-primary: #c7232e;
+    --color-secondary: #314069;
+    --color-light: #fff;
+    --color-dark: #000;
+
+    --space-s: 4px;
+    --space-m: 8px;
+    --space-l: 16px;
+    --space-xl: 32px;
+}
+
+
+    
