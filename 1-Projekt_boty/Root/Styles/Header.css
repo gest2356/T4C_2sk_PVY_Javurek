@@ -19,14 +19,6 @@
     flex-direction: column;
 }
 
-header {
-      padding:  0; 
-}
-
-header * {
-  margin: 0 ;        
-  padding: 0 40px; 
-}
 
 .UHeader {
     background-color:var(--color-secondary);
@@ -38,8 +30,13 @@ header * {
     align-items: center;
 }
 
-.UHeader-2 {
-    padding-right: 10px;
+
+.margin-left {
+    margin-left: 5vh;
+}
+
+.margin-right {
+    margin-right: 5vh;
 }
 
 .LHeader img[alt="CartICO"] {
@@ -51,10 +48,11 @@ header * {
 .LHeader img[alt="HartICO"] {
     width: 30px;
     height: 30px;
-    padding: 0;
 }
 
-
+.LHeader-2 img[alt="loupe"] {
+    display: none;
+}
 
 .LHeader input {
     height: 30px;
@@ -64,6 +62,9 @@ header * {
 
 .LHeader-1 img {
     padding: 0;
+    margin-left: 5vh;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .LHeader {
@@ -82,5 +83,54 @@ header * {
 
 
 .MItem {
-    border: 2px solid black;
+    border: 2px solid gray;
+    width: 280px;
+    height: 100px;
+    align-content: center;
+    text-align: center;
+}
+
+.MItem {
+    color: black;
+    text-decoration: none;
+}
+
+
+.MItem:hover {
+    border: 2px solid red;
+    color: red;
+}
+
+@media (max-width: 900px) {
+
+    .margin-left {
+        margin-left: 1vh;
+    }
+
+    .margin-right {
+        margin-right: 1vh;
+    }
+
+    .UHeader-2 span {
+        display: none;
+    }
+
+    .LHeader-2 img[alt="loupe"] {
+        display: block;
+    }
+
+    .LHeader-2 input {
+        display: none;
+    }
+
+    .MHeader {
+        display: grid;
+        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat(2, 280px);
+        gap: 2px;
+    }
+
+    .MHeader a:nth-child(5) {
+        display: none;
+    }
 }
