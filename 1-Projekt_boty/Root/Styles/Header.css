@@ -84,7 +84,7 @@
 
 .MItem {
     border: 2px solid gray;
-    width: 280px;
+    width: 19vw;
     height: 100px;
     align-content: center;
     text-align: center;
@@ -125,9 +125,14 @@
 
     .MHeader {
         display: grid;
-        grid-template-rows: repeat(2, 100px);
-        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: repeat(2, 10vh);
+        grid-template-columns: repeat(2, 49vw);
         gap: 2px;
+    }   
+
+    .MItem {
+        width: auto;
+        height: auto;
     }
 
     .MHeader a:nth-child(5) {
