@@ -27,12 +27,125 @@
     margin-right: 5vh;
 }
 
-.AdBaner {
-    background-image: url(../img/Vrstva\ 3.png);
+
+.AdContainer {
+    position: relative;   
+    display: block; 
+}
+
+.Adimage {
+    width: 95vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    z-index: -1;
+}
+
+.AdText {
+    color: black;
+    position: absolute;
+    top: 50%;     
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.AdText p:nth-child(1) {
+    font-size: 30px;
+    color: var(--color-primary);
+}
+
+.AdText p:nth-child(2) {
+    font-size: 30px;
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.AdText p:nth-child(3) {
+    font-size: 55px;
+    color: var(--color-secondary);
+    text-align: left;
+    font-weight: bold;
+}
+
+.AdText p:nth-child(4) {
+    font-size: 55px;
+    color: var(--color-secondary);
+    text-align: left;
+    font-weight: bold;
+}
+
+.AdText button {
+    color: white;
+    background-color: var(--color-primary);
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+}
+
+
+.CatSelect {
+    justify-content: space-between;
+}
+
+.BoyCat {   
+    background-image: url(../img/01.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 200px 47.5vh 500px 47.5vh;
-    margin-bottom: 200px;
+    width: 390px;
+    height: 200px;
+}
 
+.GirlCat {   
+    background-image: url(../img/02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 390px;
+    height: 200px;
+}
+.PickCat {   
+    background-image: url(../img/03-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 390px;
+    height: 200px;
+    margin-bottom: 30px;
+}
 
+.BoyCat div {
+    margin-top: 80px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+
+.GirlCat div {
+    margin-top: 80px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+
+.CatSelect div {
+    margin-top: 80px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+
+.CatCard {
+    text-decoration: none;
+}
+
+.CatCard div:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.Devider {
+}
+
+.Devider div {
+    margin-top: 20px;
+    border-top: 2px solid var(--color-secondary);
+    padding-right: 47.5vw;
 }
