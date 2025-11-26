@@ -101,7 +101,7 @@
     color: red;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
 
     .margin-left {
         margin-left: 1vh;
