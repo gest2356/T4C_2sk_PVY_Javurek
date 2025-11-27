@@ -54,7 +54,16 @@
      </div>
     </header> 
   <main>
+
    <a href="#" class="AddbanerLink"> <!-- AdBaner -->
+    <div class="AdBaner margin-left margin-right">
+        <p>NOVÁ DÍVČÍ KOLEKCE</p>
+        <p>ŠETRNÁ K DĚTSKÝM NOHÁM</p>
+        <p>NEJEN DO MESTA,</p>
+        <p>ALE I DO PŘÍRODY</p>
+        <button type="button">Zobrazit produkty</button>
+    </div>
+    <!--  
       <div class="AdContainer margin-left margin-right">
         <img src="./img/Vrstva 3.png" alt="AdImage" class="AdImage">
 
@@ -64,9 +73,9 @@
             <p>NEJEN DO MESTA,</p>
             <p>ALE I DO PŘÍRODY</p>
             <button type="button">Zobrazit produkty</button>
-          </div>
-    
+          </div>    
       </div>
+      -->
     </a>
 
     <div class="CatSelect margin-left margin-right"> <!-- CatSelect -->
@@ -106,9 +115,11 @@
         <div class="OfferItem">
           <img src="./img2/bota1.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
-          <div class="OfferPrice">
-            <span>529 Kč</span>
-            <span>699 Kč</span>
+          <div class="OfferPrice" style="display: flex; flex-direction: row; gap: 5px">
+            <div style="flex-grow: 1;">
+              <span>528 Kč</span>
+              <span>698 Kč</span>
+            </div>
             <div class="OfferPriceIMG">
               <img src="./img/Group 6.png" class="OfferPriceIMG" alt="Cart">
             </div>
@@ -244,27 +255,19 @@
       </div>
     </div>
 
+  </main>
+<footer>
     <div class="EmailListBaner">
-
-      <img src="./img/Vrstva 9.png" class="EmailListBanerIMG" alt="">
-
-      <div class="EmailListBanerText">
         <h6>Nezmeškejte nové a výhodné akce</h6>
         <p>Zadejte svůj e-mailem a obratem vám zašleme PDF s inspirací zdarma.</p>
-      </div>
-
-      <div class="EmailListBanerForm">
-        <input type="text" placeholder="Zadejte svůj e-mailem">
-        <button>Přihlásit</button>
-      </div>
-      
+        <div class="EmailListForm">
+          <input type="text" placeholder="Zadejte svůj e-mailem">
+          <button>Přihlásit</button>
+        </div> 
     </div>
-
-  </main>
-<footer class="footer">
+  <div class="overfooter">
   <div class="footer-container">
     
-    <!-- O NÁS -->
     <div class="footer-column auto">
       <h3>O NÁS</h3>
       <p>
@@ -291,7 +294,6 @@
       </div>
     </div>
 
-    <!-- NABÍDKA -->
     <div class="footer-column">
       <h6>NAŠE NABÍDKA</h6>
       <div class="links">
@@ -318,7 +320,6 @@
      </div>
     </div>
     </div>
-    <!-- KONTAKT -->
 
     <div class="footer-column footer-container-2 kontakt flex flex-column">
       <h3>KONTAKTUJTE NÁS</h3>
@@ -333,6 +334,7 @@
       </div>
       <p>Litvínovská 600, Praha 9, 190 00</p>
     </div>
+  </div>
 </footer> 
 
 </body>

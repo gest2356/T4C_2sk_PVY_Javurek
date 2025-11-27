@@ -20,7 +20,7 @@
 }
 
 
-.footer {
+.overfooter {
   color: white;
   display: flex;
 }
@@ -81,7 +81,6 @@
   margin-right: 5px;
 }
 
-/* Nabídka 2 sloupce */
 .links {
   display: flex;
   gap: 50px;
@@ -102,9 +101,8 @@ a {
   font-weight: bold;
 }
 
-/* Pravá část kontakt */
 .kontakt {
-  background: #26385e;       /* modrý blok */
+  background: #26385e;       
 }
 
 .social span {
@@ -114,7 +112,6 @@ a {
 }
 
 
-/* Responzivita */
 @media (max-width: 500px) {
   .footer {
     flex-direction: column;
