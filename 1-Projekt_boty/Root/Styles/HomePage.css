@@ -181,7 +181,7 @@ main {
 
 .OfferItem img {
     width: 95%;
-    height: 85%;
+    height: 70%;
     margin-left: 10px;
 }
 
@@ -208,15 +208,13 @@ main {
 
 .OfferPriceIMG {
     display: none;
-    margin-left: 55%;
+    margin-left: 40px;
 }
 
 .OfferPriceIMG img {
     width: 80%;
     height: 80%;
 }
-
-
 
 .OfferPrice span:nth-child(1) {
     color: red;
