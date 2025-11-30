@@ -25,6 +25,8 @@
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -46,25 +48,24 @@
 
 .LHeader input {
     height: 30px;
-    background: url(../img/loupe.svg) no-repeat scroll 2px 2px;
+    background: url(../img/loupe.svg) no-repeat scroll 1px 1px;
+    padding-left: 30px;
+}
 
+.DownHeder {
+    width: 80%;
+    margin: auto;
 }
 
 .LHeader-1 img {
-    padding: 0;
-    margin-left: 5vh;
-    margin-bottom: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .LHeader {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-}
-
-.LHeader-1 {
-    margin-left: 10px;
 }
 
 .LHeader-2 {
@@ -78,6 +79,7 @@
     height: 100px;
     align-content: center;
     text-align: center;
+    font-size: 25px;
 }
 
 .MItem {
@@ -91,50 +93,15 @@
     color: red;
 }
 
-.EmailListBaner {
-    background-image: url(../img/Vrstva\ 9.png);
-    background-size: cover;
-    width: 100%;
-    background-repeat: no-repeat;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px ;
-    padding-top: 80px;
-}
-
-.EmailListBaner h6 {
-    text-align: center;
-    font-size: 35px;
-}
-
-.EmailListBaner p {
-    text-align: center;
-    margin-top: 5px;
-    color: darkgray
-    font-size: 25px;
-}
-
-
-.EmailListBaner input {
-    width: 300px;
-    height: 50px;
-    padding-left: 50px;
-    background: url(../img/6.svg) no-repeat scroll 10px 15px;
-    background-color: lightgray;
-}
-
-.EmailListBaner button {
-    width: 150px;
-    height: 50px;
-    background-color: red;
-    color: white;
-}
 
 
 
 @media (max-width: 500px) {
+
+    .DownHeder {
+        width: 95%;
+    }
+
     .UHeader-2 span {
         display: none;
     }
@@ -148,14 +115,14 @@
     }
 
     .MHeader {
-        display: grid;
+        display: grid !important;
         grid-template-rows: repeat(2, 10vh);
-        grid-template-columns: repeat(2, 40vw);
+        grid-template-columns: repeat(2, 47vw);
         gap: 2px;
     }   
 
     .MItem {
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
@@ -163,37 +130,4 @@
         display: none;
     }
     
-    .EmailListBanerText {
-        width: 400px;
-    }
-
-    .EmailListBanerText h6 {
-        text-align: center;
-        font-size: 35px;
-    }
-
-    .EmailListBanerText p {
-        text-align: center;
-        margin-top: 5px;
-        color: gray;
-        font-size: 20px;
-    }
-
-    .EmailListBanerForm {
-        position: absolute;
-        top: 75%;     
-        left: 55%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-    }
-
-    .EmailListBanerForm input {
-        width: 260px;
-        height: 50px;
-    }
-
-    .EmailListBanerForm button {
-        width: 100px;
-        height: 50px;
-    }
 }

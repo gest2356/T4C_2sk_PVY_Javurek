@@ -32,10 +32,6 @@
     flex-direction: column;
 }
 
-header {
-    width: 80%;
-    margin: auto;
-}
 
 main {
     width: 80%;
@@ -184,8 +180,8 @@ main {
 }
 
 .OfferItem img {
-    width: 320px;
-    height: 380px;
+    width: 95%;
+    height: 85%;
     margin-left: 10px;
 }
 
@@ -204,24 +200,20 @@ main {
 
 .OfferPrice {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
     margin-left: 10px;
 }
 
-.OfferPriceIMG img {
-    width: 20%;
-    height: 40px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+.OfferPriceIMG {
+    display: none;
+    margin-left: 55%;
 }
 
-.OfferPriceIMG {
-    width: 270px;
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    display: none;
+.OfferPriceIMG img {
+    width: 80%;
+    height: 80%;
 }
 
 
@@ -239,16 +231,12 @@ main {
 
 .OfferItemLink:hover {
     border: 1px solid red;
-
 }
 
 
 
 .OfferItemLink:hover .OfferPriceIMG {
     display: block;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
 }
 
 .OffersButton button {
@@ -289,6 +277,12 @@ main {
 
 
 @media (max-width: 500px) {
+    
+    main {
+        width: 95%;
+    }
+
+
     .AddBanerLink {
         display: none;
     }
@@ -309,10 +303,28 @@ main {
         flex-direction: column;
     }
 
+    .OfferItem img {
+        width: 95%;
+        height: 85%;
+        margin-left: 10px;
+    }
+
+    .OfferPriceIMG {
+        margin-left: 35%;
+    }
     .OfferItem {
-        height: 600px;
+        width: 95%;
         border: 0px;
     }
+    
+    .OfferItemLink {
+        border: solid gray 1px;
+    }
+
+    .OfferItemLink:hover {
+        border: 1px solid red;
+    }
+
     /*
     .Offers a {
         border: 1px solid gray;
