@@ -2,18 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boty - Poptávkový Formulář</title>
-    <link rel="stylesheet" href="./Styles/Header.css">
+    <title>Boty - Produkt</title>
     <link rel="stylesheet" href="./Styles/Footer.css">
-    <link rel="stylesheet" href="./Styles/Demand.css">
-    <style>
-        .EmailListBaner {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./Styles/Header.css">
+    <link rel="stylesheet" href="./Styles/Product.css">
 </head>
 <body>
-   <header>
+    <header>
       <div class="UHeader flex flex-row ">
         <div class="UHeader-1 margin-left">
         <img src="./img/8.png" alt="tel">
@@ -59,78 +54,30 @@
       </a>
      </div>
     </div>
-    </header> 
-  <main>
-    <div id="NavLine">
-      <span>Domů></span>
-      <span>Poptávka</span>
-    </div>
-    <div id="FormContainer">
-      <div id="FormPicture">
-        <img src="./img/Bez názvu.png" alt="FormPicture">
-      </div>
-      <div id="FormForm">
-        <form method="post">
-          <h1>Poptávkový formulář</h1>
-          <p>Vyplňte formulář níže a my se Vám ozveme, jakmile to půjde.</p>
-
-          <div class="PartFormName">
-          <div class="FormItem">
-            <label for="jmeno">Jméno</label>
-            <input type="text" id="jmeno" name="jmeno" placeholder="Zadejte své jméno...">
-          </div>
-
-          <div class="FormItem">
-            <label for="prijmeni">Příjmení</label>
-            <input type="text" id="prijmeni" name="prijmeni" placeholder="Zadejte své příjmení...">
-          </div>
-          </div>
-          <div class="FormItem">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Zadejte svůj e-mail...">
-            <p class="error-text">Zadaný e-mail nemá správný formát</p>
-          </div>
-
-          <div class="FormItem">
-            <label for="telefon">Telefon</label>
-            <input type="text" id="telefon" name="telefon" placeholder="Zadejte svůj telefon...">
-          </div>
-
-          <div class="FormItem">
-            <label for="zeme">Země</label>
-            <select id="zeme" name="zeme">
-              <option value="">Česká Republika</option>
-              <option value="">Slovenská Republika</option>
-              <option value="">Polsko</option>
-            </select>
-          </div>
-
-          <p id="RadP">Způsob pladby</p>
-          <div class="FormRad">
-          <div class="FormItemRad">
-            <input type="radio" name="RadioPay" id="PayCard">
-            <label for="PayCard">Kartou</label>
-          </div>
-
-          <div class="FormItemRad">
-            <input type="radio" name="RadioPay" id="PayByTransfer">
-            <label for="PayByTransfer">Převodem</label>
-          </div>
-            
-          <div class="FormItemRad">
-            <input type="radio" name="Cash" id="PayByCash">
-            <label for="PayByCash">Hotově</label>
-          </div>
-          </div>
-
-          <div class="FormItem buttons">
-            <button type="button"> Zpět</button>
-            <button type="submit">Pokračovat</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </main>
+ </header> 
+    <main>
+        <div id="NavLine">
+            <span>Domů ></span>
+            <span>Dívčí boty ></span>
+            <span>Tenisky</span>
+        </div>
+        <div id="ProductGalery">
+            <div id="Pictures">
+                <div class="PictureInGalery">
+                    <img src="./img2/bota1.png" alt="bota1">
+                </div>
+                <div class="PictureInGalery">
+                    <img src="./img2/bota2.png" alt="bota1">
+                </div>
+                <div class="PictureInGalery">
+                    <img src="./img2/bota3.png" alt="bota1">
+                </div>
+                <div class="PictureInGalery">
+                    <img src="./img2/bota4.png" alt="bota1">
+                </div>
+            </div>
+        </div>
+    </main>
 <footer>
     <div class="EmailListBaner">
         <h6>Nezmeškejte nové a výhodné akce</h6>
@@ -211,6 +158,5 @@
     </div>
   </div>
 </footer> 
-
 </body>
 </html>
