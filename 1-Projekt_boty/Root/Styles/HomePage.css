@@ -264,13 +264,24 @@ main {
 }
 
 .AdMenuItem a img {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: var(--color-secondary);
 }
 
 .AdMenuItem:hover span {
     color: red;
     text-decoration: underline;
+}
+
+.AdMenu a:hover img {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: red;
 }
 
 

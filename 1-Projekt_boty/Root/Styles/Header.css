@@ -130,4 +130,7 @@
         display: none;
     }
     
+    .UHeader img[alt="tel"] {
+        display: none;
+    }
 }
