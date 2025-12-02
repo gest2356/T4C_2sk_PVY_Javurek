@@ -55,12 +55,18 @@ main {
     text-decoration: underline;
 }
 
+#ProductGalery {
+    display: flex;
+    flex-direction: row;
+}
+
+
 #Pictures {
     display: grid;
-    grid-template-columns: repeat(3, 16%);
+    width: 55vw;
+    grid-template-columns: repeat(3, 28%);
     grid-template-rows: repeat(4, 20%);
     gap: 10px;
-    height: fit-content;
 }
 
 
@@ -96,3 +102,68 @@ main {
     grid-column-start: 1;
     grid-column-end: 4;
 }
+
+#MenuText {
+    width: 45vw;
+}
+
+#MenuTextText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#MenuTextText p {
+    font-size: 35px;
+    color: var(--color-secondary);
+    width: 55%;
+    font-weight: bold;
+}
+
+#MenuTextText img {
+    width: auto;
+    height: 50px;
+    margin-top: 5px;
+}
+
+#MenuText > p {
+    font-size: 18px;
+    color: lightgray;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+
+.divider {
+    border-top: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#UserPick {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#ColorSelection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px   ;
+}
+
+#SizeSelection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px ;
+}
+
+.ColorInPicker {
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rebeccapurple;
+    padding: 10px;
+}
+
