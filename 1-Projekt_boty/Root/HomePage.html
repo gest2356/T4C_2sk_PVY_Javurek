@@ -12,9 +12,9 @@
       <div class="UHeader flex flex-row ">
         <div class="UHeader-1 margin-left">
         <img src="./img/8.png" alt="tel">
-        <span>+420 777 666 555</span>
+        <a href="tel:+420777666555"><span>+420 777 666 555</span></a>
         <span>|</span>
-        <span>info@nejlepsiboty.cz</span>
+        <a href="mailto:info@nejlepsiboty.cz"><span>info@nejlepsiboty.cz</span></a>
         </div>
         <div class="UHeader-2 flex flex-row margin-right">
         <img src="./img/profile-user.png" alt="userPFP"> 
@@ -24,12 +24,12 @@
      <div class="DownHeder">
      <div class="LHeader flex flex-row">
         <div class="LHeader-1">
-          <img src="./img/Group 4.svg" alt="logo">
+          <a href="./HomePage.html"><img src="./img/Group 4.svg" alt="logo"></a>
         </div>
         <div class="LHeader-2 flex flex-row margin-right">
           <img src="./img/loupe.png" alt="loupe">
           <input type="text" placeholder="Vyhledat zboží...">
-          <img src="./img/shopping-cart.svg" alt="CartICO">
+          <a href="./Demand.html"><img src="./img/Group 6.png" alt="CartICO"></a>
           <img src="./img/heart.svg" alt="HartICO">
         </div>
      </div>
@@ -63,7 +63,7 @@
         <p>ŠETRNÁ K DĚTSKÝM NOHÁM</p>
         <p>NEJEN DO MESTA,</p>
         <p>ALE I DO PŘÍRODY</p>
-        <button type="button">Zobrazit produkty</button>
+        <button type="button" onclick="window.location.href='#'">Zobrazit produkty</button>
     </div>
     <!--  
       <div class="AdContainer margin-left margin-right">
@@ -80,27 +80,29 @@
       -->
     </a>
 
-    <div class="CatSelect margin-left margin-right"> <!-- CatSelect -->
-      <a href="#" class="BoyCat CatCard">
-          <div class="flex flex-column">
-            <span>KLUČIČÍ</span>
-            <span>BOTY</span>
-          </div>
+
+    <div class="CatList">
+      <a href="#">
+        <div class="CatItem" id="BoyCat">
+          <span>KLUČIČÍ</span>
+          <span>BOTY</span>
+        </div>
       </a>
 
-      <a href="#" class="GirlCat CatCard">
-          <div>
-            <span>DÍVČÍ BOTY</span>
-          </div>
+      <a href="#">
+        <div class="CatItem" id="GirlCat">
+          <span>DÍVČÍ BOTY</span>
+        </div>
       </a>
 
-      <a href="#" class="PickCat CatCard">
-        <div class="flex flex-column">
-            <span>JAK SPRÁVNĚ</span>
-            <span>VYBRAT?</span>
+      <a href="#">
+        <div class="CatItem" id="PickCat">
+          <span>JAK SPRÁVNĚ </span>
+          <span>VYBRAT</span>
         </div>
       </a>
     </div>
+
 
     <div class="Devider margin-left margin-right flex flex-row"> <!-- devider -->
       <div></div>
@@ -113,7 +115,7 @@
     </div>
 
     <div class="Offers margin-left margin-right"> <!-- OfferList -->
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/bota1.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
@@ -128,7 +130,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/2930e14d-da4b-11eb-8d3f-02420a000b23.png" alt="Bota2">
           <p>Papučky barefoot hnědé kožené</p>
@@ -141,7 +143,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/7c895c56-e3fd-11eb-8d3f-02420a000b23.png " alt="Bota3">
           <p>Papučky barefoot hnědé kožené</p>
@@ -154,7 +156,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/8291fafa-e3fd-11eb-8d3f-02420a000b23.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
@@ -167,7 +169,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/bota1.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
@@ -180,7 +182,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/bota1.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
@@ -193,7 +195,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/8291fafa-e3fd-11eb-8d3f-02420a000b23.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
@@ -206,7 +208,7 @@
           </div> 
         </div>
       </a>
-      <a href="#" class="OfferItemLink">
+      <a href="./Product.html" class="OfferItemLink">
         <div class="OfferItem">
           <img src="./img2/8291fafa-e3fd-11eb-8d3f-02420a000b23.png" alt="Bota1">
           <p>Papučky barefoot hnědé kožené</p>
@@ -326,10 +328,10 @@
     <div class="footer-column footer-container-2 kontakt flex flex-column">
       <h3>KONTAKTUJTE NÁS</h3>
       <div>
-        <span><img src="./img/6.svg" alt="EmailIcon"> info@nejlepsiboty.cz</span> 
+        <a href="mailto:info@nejlepsiboty.cz"><span><img src="./img/6.svg" alt="EmailIcon"> info@nejlepsiboty.cz</span></a>
       </div>
       <div>
-        <span><img src="./img/8.svg" alt=""> +420 777 666 555</span>
+        <a href="tel:+420777666555"><span><img src="./img/8.svg" alt=""> +420 777 666 555</span></a>
       </div>
       <div class="social">
         <span><img src="./img/facebook.svg" alt="facebook "></span><span><img src="./img/Group 153.svg" alt="instagram"></span><span><img src="./img/twitter.svg" alt="twitter"></span>
