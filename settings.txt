@@ -1,0 +1,5 @@
+  ctrl P
+> preferences json
+
+
+  "vim.useSystemClipboard": true,
