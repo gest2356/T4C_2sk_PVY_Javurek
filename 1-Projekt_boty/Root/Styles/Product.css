@@ -8,11 +8,7 @@
 }
 
 
-:root {
-    /* 460 545*/
-    --offer-size-row: 50vh;
-    --offer-size-column: 19.5vw ;
-}
+
 
 .center {
   display: flex;
@@ -138,7 +134,7 @@ main {
     border-top: 1px;
     border-color: lightgray;
     border-style: solid;
-    margin-top: 10px;
+    margin-top: 60px;
     margin-bottom: 30px;
 }
 
@@ -163,7 +159,52 @@ main {
 .ColorInPicker {
     border: 2px solid gray;
     border-radius: 20px;
-    background-color: rebeccapurple;
-    padding: 10px;
+    padding: 20px;
 }
 
+.ColorBlue {background-color: var(--color-secondary);}
+.ColorBlack {background-color:black}
+.ColorRed {background-color: red}
+.ColorGrean {background-color: #acd373}
+
+.ColorActive {border-color: red;}
+
+.SizeInPicker {
+    font-size: 30px;
+}
+
+#UserPick p{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#SubText p {
+    color: var(--color-secondary);
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#SubText > span {
+    text-decoration: line-through;
+    color: lightgray;
+    font-size: 40px;
+}
+
+#SubSubText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#SubSubText span {
+    font-size: 60px;
+    color: red;
+    font-weight: bold;
+}
+
+#SubSubText button {
+    height: 50px;
+    width: 250px;
+}

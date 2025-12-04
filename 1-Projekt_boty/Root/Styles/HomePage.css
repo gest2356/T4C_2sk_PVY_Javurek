@@ -19,6 +19,9 @@
   justify-content: center;
 }
 
+a {
+    text-decoration: none;
+}
 
 .flex {
     display: flex;
@@ -97,7 +100,7 @@ main {
 
 .CatItem {
     width: 25vw;
-    height: 32vh; 
+    height: 25vh; 
     cursor: pointer;
     padding-left: 2vw;
     display: flex;
@@ -196,7 +199,7 @@ main {
 
 .OfferPriceIMG {
     display: none;
-    margin-left: 50%;
+    margin-left: 20%;
 }
 
 .OfferPriceIMG img {
@@ -383,4 +386,13 @@ main {
         width: 100px;
         height: 50px;
     }
+
+    .Devider div {
+        padding-right: 44vw;
+    }
+
+    .OffersButton {
+        width: 100%;
+    }
+
 }

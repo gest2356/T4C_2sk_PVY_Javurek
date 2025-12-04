@@ -180,16 +180,8 @@ a {
         font-size: 20px;
     }
 
-    .EmailListBanerForm {
-        position: absolute;
-        top: 75%;     
-        left: 55%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-    }
-
     .EmailListBanerForm input {
-        width: 260px;
+        width: 50vw;
         height: 50px;
     }
 

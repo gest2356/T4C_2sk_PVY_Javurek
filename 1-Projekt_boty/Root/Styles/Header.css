@@ -19,6 +19,15 @@
     flex-direction: column;
 }
 
+.UHeader-1 {
+    display: flex;
+    gap: 10px;
+}
+
+.UHeader-2 {
+    display: flex;
+    gap: 10px   ;
+}
 
 .UHeader {
     background-color:var(--color-secondary);
@@ -48,8 +57,14 @@
 
 .LHeader input {
     height: 30px;
-    background: url(../img/loupe.svg) no-repeat scroll 1px 1px;
+    background: url(../img/loupe.svg) no-repeat scroll 3px 0px;
+    background-size: contain;
     padding-left: 30px;
+}
+
+.MHeader {
+    display: flex;
+    flex-direction: row;
 }
 
 .DownHeder {
@@ -115,7 +130,7 @@
     }
 
     .MHeader {
-        display: grid !important;
+        display: grid;
         grid-template-rows: repeat(2, 10vh);
         grid-template-columns: repeat(2, 47vw);
         gap: 2px;
