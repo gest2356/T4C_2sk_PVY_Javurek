@@ -8,8 +8,6 @@
 }
 
 
-
-
 .center {
   display: flex;
   justify-content: center;
@@ -123,18 +121,18 @@ main {
 }
 
 #MenuText > p {
-    font-size: 18px;
+    font-size: 15px;
     color: lightgray;
     margin-top: 40px;
     margin-bottom: 50px;
 }
 
 
-.divider {
+.Pdivider {
     border-top: 1px;
     border-color: lightgray;
     border-style: solid;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -147,19 +145,20 @@ main {
 #ColorSelection {
     display: flex;
     flex-direction: row;
-    gap: 20px   ;
+    gap: 10px;
 }
 
 #SizeSelection {
     display: flex;
     flex-direction: row;
-    gap: 20px ;
+    gap: 10px ;
+    justify-content: center;
 }
 
 .ColorInPicker {
     border: 2px solid gray;
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .ColorBlue {background-color: var(--color-secondary);}
@@ -170,25 +169,27 @@ main {
 .ColorActive {border-color: red;}
 
 .SizeInPicker {
-    font-size: 30px;
+    font-size: 25px;
 }
 
+.GraidOut {color: gray; text-decoration: line-through;}
+.TextActive {color: red; text-decoration: underline;}
+
 #UserPick p{
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 #SubText p {
     color: var(--color-secondary);
-    font-size: 70px;
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 30px;
 }
 
 #SubText > span {
     text-decoration: line-through;
     color: lightgray;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #SubSubText {
@@ -199,12 +200,283 @@ main {
 }
 
 #SubSubText span {
-    font-size: 60px;
+    font-size: 40px;
     color: red;
     font-weight: bold;
 }
 
 #SubSubText button {
     height: 50px;
-    width: 250px;
+    width: 40%;
+    background-image: url(../img/Group\ 6.png);
+    background-repeat: no-repeat;
+    background-position: center left 5px;
+    background-color: red;
+    color: white;
+}
+
+#Description {
+    display: flex;
+    flex-direction: row;
+}
+
+#DescriptionText {
+    width: 70%;
+}
+
+#DescriptionTable {
+    width: 30%;
+}
+
+#DescriptionText h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+#DescriptionText p {
+    color: #aeb2c0;
+    margin-bottom: 20px;
+}
+
+#DescriptionText span {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+#DescriptionTable table {
+    width: 95%;
+    height: 90%;
+    margin-left: 20px;
+}
+
+#DescriptionTable table thead tr th {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+#DescriptionTable table tbody tr:nth-child(odd) {
+    background-color: #d6d9e2;
+}
+
+#DescriptionTable table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    color: #aeb2c0;
+}
+
+#DescriptionTable table tr td:nth-child(odd) {
+    color: var(--color-secondary);
+}
+
+#DescriptionTable table tr td:nth-child(even) {
+    color: #8c94a9;
+}
+
+
+.Devider div {
+    margin-top: 20px;
+    border-top: 2px solid var(--color-secondary);
+    padding-right: 39.6vw;
+}
+
+#DeviderText {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#DeviderText span:nth-child(1) {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#DeviderText span:nth-child(2) {
+    color: var(--color-secondary);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Offers {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 20px   ;
+}
+
+.OfferItem img {
+    width: 95%;
+    height: 70%;
+    margin-left: 10px;
+}
+
+.OfferItem {
+    width: var(--offer-size-column);
+    height: var(--offer-size-row);
+    border: 1px solid gray;
+    color: gray;
+    font-size: 25px;
+}
+
+.OfferItem > p {
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.OfferPrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.OfferPriceIMG {
+    display: none;
+    margin-left: 20%;
+}
+
+.OfferPriceIMG img {
+    width: 70%;
+    height: 70%;
+}
+
+.OfferPrice span:nth-child(1) {
+    color: red;
+    font-weight: bold;
+}
+
+.OfferPrice span:nth-child(2) {
+    color: gray;
+    text-decoration:line-through;
+
+}
+
+.OfferItemLink:hover .OfferItem {
+    border: 1px solid red;
+}
+
+.OfferItemLink:hover .OfferPriceIMG {
+    display: block;
+}
+
+.OffersButton button {
+    color: white;
+    background-color: var(--color-primary);
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.OffersButton {
+    width: 80vw;
+}
+
+.AdMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.AdMenuItem a span{
+    color: var(--color-secondary);
+    padding-top: 25px;
+    padding-left: 5px;
+}
+
+.AdMenuItem a img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: var(--color-secondary);
+}
+
+.AdMenuItem:hover span {
+    color: red;
+    text-decoration: underline;
+}
+
+.AdMenu a:hover img {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+@media (max-width: 500px) {
+    
+    main {
+        width: 95%;
+        margin: 0;
+    }
+
+    #Pictures {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #ProductGalery {
+        flex-direction: column;
+    }
+
+    #MenuTextText img {
+        display: none;
+    }
+
+    #MenuText {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    #UserPick {
+        flex-direction: column;
+    }
+
+    #SizeSelection {
+        justify-content: flex-start;
+    }
+
+    #Description {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #DescriptionText {
+        width: 100%;
+    }
+
+    #DescriptionTable {
+        width: 100%;
+        height: 350px;
+    }
+
+    .Devider div {
+        padding-right: 44vw;
+    }
+
+    .Offers {
+        flex-direction: column;
+    }
+
+    .OfferItem {
+        height: 508px;
+    }
+
+    .AdMenu {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .AdMenuItem {
+        font-size: 30px;
+        justify-content: center;
+    }
+
 }

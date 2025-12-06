@@ -172,7 +172,7 @@ main {
 
 .OfferItem img {
     width: 95%;
-    height: 82%;
+    height: 70%;
     margin-left: 10px;
 }
 
@@ -221,8 +221,6 @@ main {
 .OfferItemLink:hover {
     border: 1px solid red;
 }
-
-
 
 .OfferItemLink:hover .OfferPriceIMG {
     display: block;
