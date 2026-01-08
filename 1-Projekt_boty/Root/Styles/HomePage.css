@@ -10,7 +10,7 @@
 
 :root {
     /* 460 545*/
-    --offer-size-row: 50vh; /*výška*/
+    --offer-size-row: 40vh; /*výška*/
     --offer-size-column: 19.5vw; /*šířka*/
 }
 
@@ -39,6 +39,47 @@ a {
 main {
     width: 80%;
     margin: auto;
+}
+
+.EmailListBaner {
+    background-image: url(../img/Vrstva\ 9.png);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px ;
+    padding-top: 80px;
+}
+
+.EmailListBaner h6 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.EmailListBaner p {
+    text-align: center;
+    margin-top: 5px;
+    color: darkgray;
+    font-size: 25px;
+}
+
+
+.EmailListBaner input {
+    width: 300px;
+    height: 50px;
+    padding-left: 50px;
+    background: url(../img/6.svg) no-repeat scroll 10px 15px;
+    background-color: lightgray;
+}
+
+.EmailListBaner button {
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: white;
 }
 
 .AdBaner p:nth-child(1) {
@@ -393,4 +434,29 @@ main {
         width: 100%;
     }
 
+    .EmailListBanerText {
+        width: 400px;
+    }
+
+    .EmailListBanerText h6 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .EmailListBanerText p {
+        text-align: center;
+        margin-top: 5px;
+        color: darkgray;
+        font-size: 20px;
+    }
+
+    .EmailListBanerForm input {
+        width: 50vw;
+        height: 50px;
+    }
+
+    .EmailListBanerForm button {
+        width: 100px;
+        height: 50px;
+    }
 }

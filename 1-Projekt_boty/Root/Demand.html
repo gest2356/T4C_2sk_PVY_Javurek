@@ -6,20 +6,15 @@
     <link rel="stylesheet" href="./Styles/Header.css">
     <link rel="stylesheet" href="./Styles/Footer.css">
     <link rel="stylesheet" href="./Styles/Demand.css">
-    <style>
-        .EmailListBaner {
-            display: none;
-        }
-    </style>
 </head>
 <body>
    <header>
       <div class="UHeader flex flex-row ">
         <div class="UHeader-1 margin-left">
         <img src="./img/8.png" alt="tel">
-        <span>+420 777 666 555</span>
+        <a href="tel:+420777666555"><span>+420 777 666 555</span></a>
         <span>|</span>
-        <span>info@nejlepsiboty.cz</span>
+        <a href="mailto:info@nejlepsiboty.cz"><span>info@nejlepsiboty.cz</span></a>
         </div>
         <div class="UHeader-2 flex flex-row margin-right">
         <img src="./img/profile-user.png" alt="userPFP"> 
@@ -118,7 +113,7 @@
           </div>
             
           <div class="FormItemRad">
-            <input type="radio" name="Cash" id="PayByCash">
+            <input type="radio" name="RadioPay" id="PayByCash">
             <label for="PayByCash">Hotově</label>
           </div>
           </div>
@@ -132,14 +127,6 @@
     </div>
   </main>
 <footer>
-    <div class="EmailListBaner">
-        <h6>Nezmeškejte nové a výhodné akce</h6>
-        <p>Zadejte svůj e-mailem a obratem vám zašleme PDF s inspirací zdarma.</p>
-        <div class="EmailListForm">
-          <input type="text" placeholder="Zadejte svůj e-mailem">
-          <button>Přihlásit</button>
-        </div> 
-    </div>
   <div class="overfooter">
   <div class="footer-container">
     
@@ -199,15 +186,15 @@
     <div class="footer-column footer-container-2 kontakt flex flex-column">
       <h3>KONTAKTUJTE NÁS</h3>
       <div>
-        <span><img src="./img/6.svg" alt="EmailIcon"> info@nejlepsiboty.cz</span> 
+        <a href="mailto:info@nejlepsiboty.cz"><span><img src="./img/6.svg" alt="EmailIcon"> info@nejlepsiboty.cz</span></a>
       </div>
       <div>
-        <span><img src="./img/8.svg" alt=""> +420 777 666 555</span>
+        <a href="tel:+420777666555"><span><img src="./img/8.svg" alt=""> +420 777 666 555</span></a>
       </div>
       <div class="social">
         <span><img src="./img/facebook.svg" alt="facebook "></span><span><img src="./img/Group 153.svg" alt="instagram"></span><span><img src="./img/twitter.svg" alt="twitter"></span>
       </div>
-      <p>Litvínovská 600, Praha 9, 190 00</p>
+      <address>Litvínovská 600, Praha 9, 190 00</address>
     </div>
   </div>
 </footer> 
