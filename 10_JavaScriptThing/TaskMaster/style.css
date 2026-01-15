@@ -29,12 +29,14 @@ header h1 {
     color: var(--primary);
 }
 
+
 #quote-display {
     font-style: italic;
     font-size: 0.9rem;
     color: #64748b;
     margin-bottom: 1.5rem;
 }
+
 
 /* Stylování formuláře */
 .input-section form {
@@ -67,8 +69,14 @@ button {
     font-weight: bold;
 }
 
+
 button:hover {
     background-color: #1d4ed8;
+}
+
+button:disabled, button:disabled:hover {
+    background-color: lightgray;
+    cursor: not-allowed;
 }
 
 #error-message {
@@ -128,6 +136,9 @@ button:hover {
     font-size: 0.9rem;
 }
 
+
+
+
 /* Třída pro skrytí elementů, které neodpovídají hledání */
 .hidden {
     display: none !important;
@@ -137,3 +148,4 @@ button:hover {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+

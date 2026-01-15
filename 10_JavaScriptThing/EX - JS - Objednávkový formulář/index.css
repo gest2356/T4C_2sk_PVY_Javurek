@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+h2 {
+    text-align: center;
+    color: #444;
+}
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+fieldset {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 6px;
+}
+legend {
+    font-weight: bold;
+    color: #0056b3;
+    padding: 0 8px;
+    font-size: 0.95em;
+}
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+.option-group {
+    margin-top: 10px;
+}
+.option-group label {
+    display: inline;
+    margin-right: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #218838;
+}

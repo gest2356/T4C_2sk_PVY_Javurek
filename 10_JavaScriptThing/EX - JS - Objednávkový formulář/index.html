@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objednávkový formulář</title>
+</head>
+<body>
+
+<h2>Objednávkový formulář</h2>
+
+<form action="#" method="POST"  id="myForm">
+
+  <fieldset>
+    <legend>Základní údaje</legend>
+
+    <label for="firstName">Jméno</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Příjmení</label>
+    <input type="text" id="lastName" name="lastName" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Fakturační adresa</legend>
+
+    <label for="billingCompany">Adresa (Název firmy / budova)</label>
+    <input type="text" id="billingCompany" name="billingCompany">
+
+    <label for="billingStreet">Ulice a číslo popisné</label>
+    <input type="text" id="billingStreet" name="billingStreet" required>
+
+    <label for="billingCity">Město</label>
+    <input type="text" id="billingCity" name="billingCity" required>
+
+    <label for="billingZip">PSČ</label>
+    <input type="text" id="billingZip" name="billingZip" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Doručovací adresa</legend>
+
+    <label for="shippingCompany">Adresa (Název firmy / budova)</label>
+    <input type="text" id="shippingCompany" name="shippingCompany">
+
+    <label for="shippingStreet">Ulice a číslo popisné</label>
+    <input type="text" id="shippingStreet" name="shippingStreet">
+
+    <label for="shippingCity">Město</label>
+    <input type="text" id="shippingCity" name="shippingCity">
+
+    <label for="shippingZip">PSČ</label>
+    <input type="text" id="shippingZip" name="shippingZip">
+  </fieldset>
+
+  <fieldset>
+    <legend>Způsob dodání</legend>
+
+    <div class="option-group">
+      <input type="radio" id="deliveryDpd" name="deliveryMethod" value="dpd" required>
+      <label for="deliveryDpd">DPD Kurýr na Adresu</label>
+      <br>
+
+      <input type="radio" id="deliveryCzechPost" name="deliveryMethod" value="czech_post">
+      <label for="deliveryCzechPost">Česká pošta</label>
+      <br>
+
+      <input type="radio" id="deliveryPacketa" name="deliveryMethod" value="packeta">
+      <label for="deliveryPacketa">Zásilkovna na adresu</label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Souhlasy</legend>
+
+    <div class="option-group">
+      <input type="checkbox" id="gdprConsent" name="gdprConsent" required>
+      <label for="gdprConsent">Souhlasím se zpracováním osobních údajů (GDPR) a obchodními podmínkami.</label>
+    </div>
+    <div>
+      <input type="checkbox" id="DeliveryAndBilingSame" name="DeliveryAndBilingSame">
+      <label for="DeliveryAndBilingSame">Schodné dodací udaje jako fakturační.</label>
+    </div>
+  </fieldset>
+
+  <button type="submit">Odeslat objednávku</button>
+
+</form>
+
+<script src="index.js"></script>
+
+</body>
+</html>
