@@ -1,3 +1,5 @@
-import MirrorDeliveryAndBiling from './MirrorDeliveryAndBiling.js';
+import  {mirrorDeliveryAndBiling, printInvoiceNumber, saveData }  from "./Modules/Form.js";
 
-MirrorDeliveryAndBiling();
+mirrorDeliveryAndBiling();
+printInvoiceNumber();
+saveData()
