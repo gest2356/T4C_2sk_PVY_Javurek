@@ -1,3 +1,5 @@
+const DB = []
+
 
 const formEl = document.getElementById('myForm');
 const billingSameEl = document.getElementById('DeliveryAndBilingSame');
@@ -12,6 +14,7 @@ const dZIPEl = document.getElementById('shippingZip');
 
 const invoiceEl = document.getElementById('invoiceNumber');
 
+const selectEl = document.getElementById('InvoiceSelect');
 
 
 function mirrorDeliveryAndBiling() {
@@ -57,30 +60,88 @@ function generateInvoiceNumber() {
     let randomNumber = Math.abs(Math.floor(Math.random()  * (1 - 99999) + (1))).toString();
 
      while (randomNumber.length < 5) {
-         randomNumber = randomNumber + "0"
+         randomNumber = "0" + randomNumber;
      }
 
     return "FAK" + trimedYear + "-" + month + "-" + randomNumber;
 }
+
 function printInvoiceNumber() {
-    invoiceEl.innerHTML = generateInvoiceNumber();
+    
+    const invoices = DB.map(items => items.invoiceNumber);
+
+    console.log(invoices);
+    
+    let newInvoiceNumber = generateInvoiceNumber();
+
+    while (invoices.includes(newInvoiceNumber)) {
+        newInvoiceNumber = generateInvoiceNumber();
+    }
+    
+    invoiceEl.value = newInvoiceNumber;
+}
+
+function fillSelectWhitInoiceNumbs() {
+
+    if (document.querySelector('.addedByInvoice')) {
+        selectEl.removeChild(document.querySelector('.addedByInoice'));
+    }
+
+    
+    DB.forEach(items => {
+        const newInvoiceToSelect = document.createElement('option');
+
+        newInvoiceToSelect.textContent = items.invoiceNumber;
+        
+        newInvoiceToSelect.value = items.invoiceNumber;
+
+        newInvoiceToSelect.className = "addedByInvoice";
+
+        selectEl.appendChild(newInvoiceToSelect);
+    })
+
+}
+
+function fillFormWithSelectedInoice() {
+    selectEl.addEventListener('change', (e) => {
+        e.preventDefault();
+        
+        const filtredInvoice = DB.find(item => item.invoiceNumber === e.currentTarget.value)
+
+
+        Object.entries(filtredInvoice).forEach(([key, value]) => {
+
+            const input = formEl.elements[key];
+
+            input.value = value;
+        })
+
+        
+    })
 }
 
 function saveData(){
-    const DB = []
 
     formEl.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const dataObject = Object.fromEntries(new FormData(e.target))
 
-        DB.push(dataObject)
+        const exisitngIndex = DB.findIndex(item => item.invoiceNumber === dataObject.invoiceNumber)
 
-       console.log(DB)
+        if (exisitngIndex !== -1) {
+            DB[exisitngIndex] = dataObject
+        } else {
+            DB.push(dataObject)
+        }
+
+        console.log(DB)
 
         e.target.reset()
+
+        printInvoiceNumber();
+        fillSelectWhitInoiceNumbs()
     })
 }
 
-
-export { mirrorDeliveryAndBiling , printInvoiceNumber, saveData };
+export { mirrorDeliveryAndBiling , printInvoiceNumber, saveData, fillSelectWhitInoiceNumbs, fillFormWithSelectedInoice };

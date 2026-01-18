@@ -9,11 +9,13 @@
 
 <h2>Objednávkový formulář</h2>
 
-<p id="invoiceNumber"></p>
 <form action="#" method="POST"  id="myForm">
 
   <fieldset>
     <legend>Základní údaje</legend>
+
+    <label for="invoiceNumber">Číslo faktury</label>
+    <input type="text" id="invoiceNumber" name="invoiceNumber" required>
 
     <label for="firstName">Jméno</label>
     <input type="text" id="firstName" name="firstName" required>
@@ -86,6 +88,11 @@
 
   <button type="submit">Odeslat objednávku</button>
 
+  <label for="InvoiceSelect">Vyber dopravní prostředek:</label>
+  <select id="InvoiceSelect">
+    <option value="">-- Zvolte možnost --</option>
+  </select>
+  
 </form>
 
 <script src="index.js" type="module" ></script>
