@@ -16,25 +16,25 @@ const invoiceEl = document.getElementById('invoiceNumber');
 
 const selectEl = document.getElementById('InvoiceSelect');
 
+const thoustEl = document.getElementById('thoustContainer');
 
 function mirrorDeliveryAndBiling() {
     billingSameEl.addEventListener('click', (e) => {
-        e.preventDefault();
-        
+
         if (dAddresEl.value === "" || dStreetEl.value === "" || dCityEl.value === "" || dZIPEl.value === "") {
-        const dataObject = {
-            address: bAddresEl.value,
-            street: bStreetEl.value,
-            city: bCityEl.value,
-            zip: bZIPEl.value,
-        }
+            const dataObject = {
+                address: bAddresEl.value,
+                street: bStreetEl.value,
+                city: bCityEl.value,
+                zip: bZIPEl.value,
+            }
 
-        // console.log(dataObject);
+            // console.log(dataObject);
 
-        dAddresEl.value = dataObject.address;
-        dStreetEl.value = dataObject.street;
-        dCityEl.value = dataObject.city;
-        dZIPEl.value = dataObject.zip;
+            dAddresEl.value = dataObject.address;
+            dStreetEl.value = dataObject.street;
+            dCityEl.value = dataObject.city;
+            dZIPEl.value = dataObject.zip;
         }
         else{
             dAddresEl.value = ""
@@ -120,10 +120,27 @@ function fillFormWithSelectedInoice() {
     })
 }
 
+function informUserThoust() {
+   const thoust = document.createElement("div")
+
+   thoust.innerHTML = "<div class=\"toast\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">\n  <div class=\"toast-header\">\n    <img src=\"...\" class=\"rounded me-2\" alt=\"...\">\n    <strong class=\"me-auto\">Bootstrap</strong>\n    <small>11 mins ago</small>\n    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>\n  </div>\n  <div class=\"toast-body\">\n    Hello, world! This is a toast message.\n  </div>\n</div>";
+
+   thoustEl.appendChild(thoust);
+
+
+    setTimeout(function() {
+        thoustEl.removeChild(thoust);
+    }, 3000);
+
+
+}
+
 function saveData(){
 
     formEl.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        let numberOfStaffInField = DB.length;
 
         const dataObject = Object.fromEntries(new FormData(e.target))
 
@@ -133,6 +150,10 @@ function saveData(){
             DB[exisitngIndex] = dataObject
         } else {
             DB.push(dataObject)
+        }
+
+        if (DB.length === numberOfStaffInField + 1) {
+            informUserThoust()
         }
 
         console.log(DB)
