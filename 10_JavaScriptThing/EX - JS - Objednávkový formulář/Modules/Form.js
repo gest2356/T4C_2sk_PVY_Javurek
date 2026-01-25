@@ -120,20 +120,6 @@ function fillFormWithSelectedInoice() {
     })
 }
 
-function informUserThoust() {
-   const thoust = document.createElement("div")
-
-   thoust.innerHTML = "<div class=\"toast\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">\n  <div class=\"toast-header\">\n    <img src=\"...\" class=\"rounded me-2\" alt=\"...\">\n    <strong class=\"me-auto\">Bootstrap</strong>\n    <small>11 mins ago</small>\n    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>\n  </div>\n  <div class=\"toast-body\">\n    Hello, world! This is a toast message.\n  </div>\n</div>";
-
-   thoustEl.appendChild(thoust);
-
-
-    setTimeout(function() {
-        thoustEl.removeChild(thoust);
-    }, 3000);
-
-
-}
 
 function saveData(){
 
@@ -153,7 +139,9 @@ function saveData(){
         }
 
         if (DB.length === numberOfStaffInField + 1) {
-            informUserThoust()
+            informUserThoustSucces()
+        } if (DB.length === numberOfStaffInField) {
+            informThoustEdit()
         }
 
         console.log(DB)
@@ -165,4 +153,49 @@ function saveData(){
     })
 }
 
+function informUserThoustSucces() {
+    const thoust = document.createElement("div")
+
+
+        thoust.innerHTML = "<div class=\"toast\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">\n  <div class=\"toast-header\">\n    <img src=\"...\" class=\"rounded me-2\" alt=\"...\">\n    <strong class=\"me-auto\">Bootstrap</strong>\n  </div>\n  <div class=\"toast-body\">\n    Faktura byla uspěšně přidána.\n  </div>\n</div>";
+
+    thoustEl.appendChild(thoust);
+
+
+    setTimeout(function() {
+        thoustEl.removeChild(thoust);
+    }, 3000);
+
+}
+
+function informThoustEdit() {
+    const thoust = document.createElement("div")
+
+    thoust.innerHTML = "<div class=\"toast\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">\n  <div class=\"toast-header\">\n    <img src=\"...\" class=\"rounded me-2\" alt=\"...\">\n    <strong class=\"me-auto\">Bootstrap</strong>\n  </div>\n  <div class=\"toast-body\">\n    Faktura byla uspěšně upravená.\n  </div>\n</div>";
+
+    thoustEl.appendChild(thoust);
+
+    setTimeout(function() {
+        thoustEl.removeChild(thoust);
+    }, 3000);
+
+}
+/*
+function informUserThoustFalure() {
+
+    const thoust = document.createElement("div")
+
+
+    thoust.innerHTML = "<div class=\"toast\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">\n  <div class=\"toast-header\">\n    <img src=\"...\" class=\"rounded me-2\" alt=\"...\">\n    <strong class=\"me-auto\">Bootstrap</strong>\n  </div>\n  <div class=\"toast-body\">\n    Stala se neočekávana chyba.\n  </div>\n</div>";
+
+    thoustEl.appendChild(thoust);
+
+
+    setTimeout(function() {
+        thoustEl.removeChild(thoust);
+    }, 3000);
+}
+*/
+
 export { mirrorDeliveryAndBiling , printInvoiceNumber, saveData, fillSelectWhitInoiceNumbs, fillFormWithSelectedInoice };
+
