@@ -2,6 +2,25 @@ const formEL = document.getElementById("task-form")
 const taskNameEL = document.getElementById("task-input")
 const butonEl = document.getElementById("add-btn")
 
+const liEl = document.querySelectorAll(".task-item");
+
+
+export function chackTask() {
+    liEl.forEach((li) => {
+        const chackbox = li.querySelector("input[type=checkbox]")
+
+            chackbox.addEventListener("change", (e) => {
+
+                if (e.target.checked) {
+                    li.classList.add("completed");
+                } else {
+                    li.classList.remove("completed");
+                }
+
+            })
+        })
+}
+
 
 const task = [];
 
@@ -59,5 +78,10 @@ function convertDataToObject() {
     for (let pair of data.entries()) {
         res[pair[0]] = pair[1]
     }
+
+}
+
+function crossCompleated(){
+
 
 }

@@ -120,7 +120,6 @@ function fillFormWithSelectedInoice() {
     })
 }
 
-
 function saveData(){
 
     formEl.addEventListener('submit', (e) => {

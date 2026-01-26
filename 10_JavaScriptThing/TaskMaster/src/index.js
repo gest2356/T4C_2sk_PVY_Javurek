@@ -1,9 +1,11 @@
 import { initialize } from './modules/quoutes.js'
-import {initFormLisener} from "./modules/forms.js";
+import {initFormLisener, chackTask} from "./modules/forms.js";
 
+chackTask()
 initialize();
 
 initFormLisener();
+
 
 /*
 document.addEventListener("keydown", () => {
