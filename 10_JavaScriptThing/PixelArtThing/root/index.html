@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Drawing App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+  <header>
+    <h1>🎨 Pixel Art Drawing App</h1>
+    <div class="instructions">
+      <p><span>Klávesnice:</span> Šipky – výběr barvy | Enter – potvrzení barvy</p>
+      <p><span>Myš:</span> Klik = zabarví políčko | Double-click = vymaž políčko</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="palette-section">
+      <h3>Paleta barev:</h3>
+      <div class="palette-grid">
+        <div class="color-swatch bg-red"></div>
+        <div class="color-swatch bg-lime"></div>
+        <div class="color-swatch bg-blue"></div>
+        <div class="color-swatch bg-yellow"></div>
+        <div class="color-swatch bg-fuchsia"></div>
+        <div class="color-swatch bg-cyan"></div>
+        <div class="color-swatch bg-orange"></div>
+        <div class="color-swatch bg-purple"></div>
+        <div class="color-swatch bg-black"></div>
+        <div class="color-swatch bg-white"></div>
+      </div>
+
+    
+      <div class="current-color-area">
+        <h3>Aktuální barva:</h3>
+        <div class="current-color-preview " id=""></div>
+        <p class="hint">⚡ Použijte šipky pro navigaci a Enter pro výběr</p>
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <div id="pixel-grid" class="pixel-grid">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="advanced-features">
+    <!--[if IE]>
+
+    <h3>⚙️ Pokročilé funkce</h3>
+
+    <div class="feature-row">
+      <label>Přidat vlastní barvu:</label>
+      <div class="color-adder">
+        <input type="color" value="#ff6b81">
+        <button class="btn btn-primary">Přidat do palety</button>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <label>Velikost gridu:</label>
+      <div class="grid-inputs">
+        <input type="number" value="20"> x <input type="number" value="20">
+        <button class="btn btn-primary">Vygenerovat nový grid</button>
+      </div>
+    </div>
+
+    <button class="btn btn-danger">🗑️ Vymazat vše</button>
+    <![endif]-->
+  </footer>
+</div>
+
+</body>
+<script src="./scripts.js" type="module"></script>
+</html>
