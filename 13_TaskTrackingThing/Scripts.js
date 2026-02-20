@@ -4,6 +4,8 @@ const taskButtonEl = document.getElementById("TaskInputButton");
 
 const taskOutputEl = document.getElementById("TaskOutputs");
 
+let isRegistred = false;
+
 function addTask() {
     taskButtonEl.addEventListener("click", e => {
         e.preventDefault();
@@ -18,6 +20,10 @@ function addTask() {
         
         const timeSpendOnTask = document.createElement('span');
         
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'deleteButton';
+        deleteButton.innerText = 'finished!';
+        
         timeSpendOnTask.innerText = "00:00:00";
         timeSpendOnTask.classList.add('timeSpend');
         
@@ -27,13 +33,23 @@ function addTask() {
         newTaskWrapper.appendChild(newTaskText);
         newTaskWrapper.appendChild(newTaskStartedTime);
         newTaskWrapper.appendChild(timeSpendOnTask);
+        newTaskWrapper.appendChild(deleteButton);
         
         taskOutputEl.appendChild(newTaskWrapper);
+       
+       registerInterval()
+        registerDeleteButtons()
         
-        const timeTickInterval = setInterval(addSecond, 1000);
-        
-        return timeTickInterval
     });
+}
+
+function registerInterval() {
+    if (isRegistred) {
+        return;
+    } else  {
+         setInterval(addSecond, 1000);
+         isRegistred = true;
+    }
 }
 
 function addSecond() {
@@ -42,24 +58,40 @@ function addSecond() {
         let el = timeSpend;
         let elParent = el.parentElement;
         
-        let elValue = el.innerText.valueAsNumber / 1000;
+        // let elValue = el.innerText.valueAsNumber / 1000;
+        let timeValues = el.innerText.split(':');
+        let elSecondValue = Number(timeValues[2]);
+        let elMinuteValue = Number(timeValues[1]) *  60;
+        let elHourValue = Number(timeValues[0]) * 3600;
         
-        elValue += 1
-
+        const totalSeconds = elSecondValue + elMinuteValue +elHourValue + 1;
+        
+        
         elParent.removeChild(el);
-        let hours = Math. floor(elValue / 3600); 
-        let minutes = Math. floor((elValue - (hours * 3600)) / 60); 
-        let seconds = elValue - (hours * 3600) - (minutes * 60);
         
-        console.log(elValue);
-        
-        console.log(hours, minutes, seconds);
+        const result = new Date(totalSeconds * 1000).toISOString().slice(11, 19);
         
         
-        el.innerHTML = `${hours}:${minutes}:${seconds}`;
+        el.innerHTML = result.toString(); 
         
-        elParent.appendChild(el);
+        elParent.children[2].before(el);
         
+    })
+}
+
+function registerDeleteButtons() {
+    const deleteButtonELs = document.querySelectorAll('.deleteButton');
+    
+    console.log(deleteButtonELs + "lol");
+    
+    deleteButtonELs.forEach(deleteButton => {
+        deleteButton.addEventListener('click', e => {
+            e.preventDefault();
+            
+            const taskToDelete = e.target.parentElement
+            
+            taskToDelete.remove()
+        })
     })
 }
 
