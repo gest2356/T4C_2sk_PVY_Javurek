@@ -1,3 +1,4 @@
-.TaskOutput div  > {
-    margin: 5px;
+span {
+    color: green;
+    padding: 10px   ;
 }
