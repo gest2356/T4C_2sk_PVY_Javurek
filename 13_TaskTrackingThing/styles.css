@@ -1,4 +1,10 @@
+#TaskOutputs {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 span {
     color: green;
-    padding: 10px   ;
+    padding: 20px   ;
+
 }

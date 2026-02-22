@@ -12,36 +12,43 @@ function addTask() {
     taskButtonEl.addEventListener("click", e => {
         e.preventDefault();
 
-        const taskText = taskInputTextEl.value;
-        const time = taskInputTimeEl.value + ":00";
-        
-        const newTaskWrapper = document.createElement('div');
-        
-        const newTaskText = document.createElement('span');
-        const newTaskStartedTime = document.createElement('span');
-        
-        const timeSpendOnTask = document.createElement('span');
-        
-        const deleteButton = document.createElement('button');
-        deleteButton.className = 'deleteButton';
-        deleteButton.innerText = 'finished!';
-        
-        timeSpendOnTask.innerText = "00:00:00";
-        timeSpendOnTask.classList.add('timeSpend');
-        
-        newTaskText.innerText = taskText;
-        newTaskStartedTime.innerText = time;
-        
-        newTaskWrapper.appendChild(newTaskText);
-        newTaskWrapper.appendChild(newTaskStartedTime);
-        newTaskWrapper.appendChild(timeSpendOnTask);
-        newTaskWrapper.appendChild(deleteButton);
-        
-        taskOutputEl.appendChild(newTaskWrapper);
-       
-       registerInterval()
-        registerDeleteButtons()
-        
+        console.log(taskOutputEl.children[1]);
+
+        if (taskOutputEl.children[1] !== undefined && taskOutputEl.children[2] === undefined ) {
+           return;
+        }else {
+            const taskText = taskInputTextEl.value;
+            const time = taskInputTimeEl.value + ":00";
+
+            const newTaskWrapper = document.createElement('div');
+
+            const newTaskText = document.createElement('span');
+            const newTaskStartedTime = document.createElement('span');
+
+            const timeSpendOnTask = document.createElement('span');
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'deleteButton';
+            deleteButton.innerText = 'finished!';
+
+            timeSpendOnTask.innerText = "00:00:00";
+            timeSpendOnTask.classList.add('timeSpend');
+
+            newTaskText.innerText = taskText;
+            newTaskStartedTime.innerText = time;
+
+            newTaskWrapper.appendChild(newTaskText);
+            newTaskWrapper.appendChild(newTaskStartedTime);
+            newTaskWrapper.appendChild(timeSpendOnTask);
+            newTaskWrapper.appendChild(deleteButton);
+
+            taskOutputEl.appendChild(newTaskWrapper);
+
+            registerInterval()
+            registerDeleteButtons()
+
+        }
+
     });
 }
 
@@ -99,7 +106,7 @@ function registerDeleteButtons() {
             const taskToDelete = e.target.parentElement
             const taskToMove = e.target.parentElement
 
-            taskToDelete.remove()
+            taskToDelete.remove();
 
             taskToMove.removeChild(deleteButton);
 
