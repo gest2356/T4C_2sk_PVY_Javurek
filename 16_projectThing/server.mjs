@@ -1,13 +1,14 @@
 import express from 'express'
 import cors from "cors"
 import mysql from 'mysql'
+import {connectToMysql, qeryMyql} from "./db/db.mjs";
 
 const app = express()
 const port = 3000
-
+/*
 const connection = mysql.createConnection({
 })
-
+*/
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.setHeader('Access-Control-Allow-Methods', '*');
@@ -15,7 +16,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-
+/*
 connection.connect();
 
 connection.query('SELECT * FROM rooms', (err, resalt) => {
@@ -25,17 +26,14 @@ connection.query('SELECT * FROM rooms', (err, resalt) => {
 })
 
 connection.end()
+*/
 
 app.get('/api/rooms', (req, res) => {
-    res.send([
-        {
-            id: 1,
-            roomNumber: "489",
-            building: "campus",
-            capacity: "45",
-            type: "room",
-        }
-    ])
+    const pool = connectToMysql();
+
+    const resaltFromDb = qeryMyql(pool, "SELECT * FROM rooms");
+
+    res.send(resaltFromDb);
 })
 
 
