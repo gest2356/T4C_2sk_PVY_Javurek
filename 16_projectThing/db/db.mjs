@@ -1,4 +1,4 @@
-import mysql from 'mysql'
+import mysql from 'mysql2/promise'
 
 let pool;
 
@@ -15,6 +15,7 @@ export async function connectToMysql() {
 
         await pool.query("SELECT 1")
         console.log("Connected to Mysql")
+        console.log(pool)
         return pool
     } catch (ex) {
         console.log(ex.message)
@@ -22,11 +23,8 @@ export async function connectToMysql() {
     }
 }
 
-export async function qeryMyql(pool, query) {
-    let res = await pool.query(query)
+export async function queryMysql(pool, sql, params) {
+    const [rows] = await pool.query(sql, params);
+    return rows;
 }
 
-const poold = await connectToMysql();
-const responese = await poold.query("SELECT * FROM rooms");
-
-console.log(responese.rows)
